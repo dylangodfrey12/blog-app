@@ -1,0 +1,10 @@
+<h1>List of Articles</h1>
+
+<% @article.each do |a| %>
+   <div class="row">
+       <div class="col-xs-8 col-xs-offset-2">
+         <tr><%= a.title %></tr>
+         <tr><%= a.description %></tr>
+      </div>
+   </div>
+<% end %>
