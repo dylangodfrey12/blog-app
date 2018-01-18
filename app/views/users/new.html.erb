@@ -1,50 +1,9 @@
-<h1 style="text-align:center;">Sign in</h1>
-<br>
-<%= form_for(@user, :html => {class: "form-horizontal", role: "form"}, url: signup_path) do |add| %>
-<%= render 'shared/errors', obj: @user %>
 
-<div class="form-group">
-   <div class="control-label col-sm-2">
-      <%= add.label :name %>
-   </div>
-   <div class="col-sm-4">
-      <%= add.text_field :name, class:"form-control", placeholder: "Enter Name",autofocus:true %></p>
-   </div>
-</div>
-<div class="form-group">
-   <div class="control-label col-sm-2">
-      <%= add.label :username %>
-   </div>
-   <div class="col-sm-4">
-      <%= add.text_field :username, class:"form-control", placeholder: "Enter Username",autofocus:true %></p>
-   </div>
-</div>
-
-<div class="form-group">
-   <div class="control-label col-sm-2">
-      <%= add.label :password %>
-   </div>
-   <div class="col-sm-4">
-      <%= add.password_field :password, class:"form-control",placeholder:" Enter Password", autofocus:true %>
-   </div>
-</div>
-<div class="form-group">
-   <%= render 'shared/errors', obj: @user %>
-   <div class="control-label col-sm-2">
-      <%=add.label :email %>
-   </div>
-   <div class="col-sm-4">
-      <%= add.email_field :email, class:"form-control",placeholder:"Enter Email", autofocus:true %>
-   </div>
-</div>
-<div class="form-group">
-   
-   <div class="col-sm-offset-2 col-sm-10">
-      <%=add.submit "Sign Up",class:'btn btn-primary btn-lg' %>
-   </div>
-
-<% end %>
-<div class="col-sm-offset-2 col-sm-10">
-
-[ <%= link_to "Cancel ", root_path %> ]
+<% provide(:title, 'Sign up') %>
+<% provide(:button_text, 'Create my account') %>
+<h1>Sign up</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render 'form' %>
+  </div>
 </div>
